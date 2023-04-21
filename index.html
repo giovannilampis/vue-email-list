@@ -20,7 +20,13 @@
 
         <div class="container">
 
-            {{ mailingList }}
+            <ul>
+
+                <li v-for="(email, index) in mailingList" :key="index">
+                    <span>{{ email }}</span>
+                </li>
+
+            </ul>
 
         </div>
 
