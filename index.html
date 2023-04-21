@@ -28,17 +28,9 @@
 
             </div>
 
-            <!-- Show email addresses only when they have all been generated -->
-
-            <ul>
-
-                <li v-if="mailingList.length % 10 === 0" v-for="(email, index) in mailingList" :key="index">
-                    <span>{{ email }}</span>
-                </li>
-
-            </ul>
-
-            
+            <div v-if="mailingList.length % 10 === 0" v-for="(email, index) in mailingList" :key="index">
+                {{ email }}
+            </div>
 
         </div>
 
