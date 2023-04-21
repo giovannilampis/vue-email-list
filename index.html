@@ -20,6 +20,8 @@
 
         <div class="container">
 
+            <h1>Random Emails VUE JS 3 Generator</h1>
+
             <ul>
 
                 <li v-for="(email, index) in mailingList" :key="index">
@@ -27,6 +29,8 @@
                 </li>
 
             </ul>
+
+            <button @click="callBooleanApi">Create Random Emails</button>
 
         </div>
 
