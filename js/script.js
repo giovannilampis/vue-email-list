@@ -19,9 +19,11 @@ createApp ({
     methods: {
 
         callBooleanApi(){
-            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(response){
-                console.log( response.data.response)
-                this.mailingList.push(response.data.response)
+
+            mailingList: []
+
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then( (res) => {
+                this.mailingList.push(res.data.response)
             })
         }
 
